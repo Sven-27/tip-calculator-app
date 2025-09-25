@@ -1,0 +1,63 @@
+// default reset settings
+
+// normalize box sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// remove default margins and paddings
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+// set base font styles
+ body {
+   font-family: 'Arial', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   color: #333;
+   min-height: 100vh;
+ }
+
+ // reset links and lists
+ a {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ ul,
+ ol {
+   list-style: none;
+ }
+
+ // handle forms
+ input,
+ textarea,
+ select,
+ button {
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit;
+   border: none;
+   outline: none;
+ }
+
+ img,
+ video {
+   max-width: 100%;
+   height: auto;
+ }
