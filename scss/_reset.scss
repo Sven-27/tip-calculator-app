@@ -26,7 +26,8 @@ ul {
 
 // set base font styles
  body {
-   font-family: 'Arial', sans-serif;
+   font-family: "Space Mono", monospace;
+   font-weight: 700;
    font-size: 16px;
    line-height: 1.5;
    color: #333;
@@ -56,6 +57,7 @@ ul {
    outline: none;
  }
 
+ // make images and videos responsive
  img,
  video {
    max-width: 100%;
