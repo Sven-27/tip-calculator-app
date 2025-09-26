@@ -60,4 +60,30 @@ video {
   height: auto;
 }
 
+h1 {
+  color: #3D6666;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 375px;
+  border-radius: 2rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (width >= 700px) {
+  .container {
+    max-width: 608px;
+    padding: 3rem 5rem;
+  }
+}
+@media only screen and (width >= 1024px) {
+  .container {
+    max-width: 920px;
+    padding: 2rem;
+  }
+}
+
 /*# sourceMappingURL=output.css.map */

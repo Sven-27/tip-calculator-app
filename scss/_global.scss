@@ -1,0 +1,23 @@
+h1{
+  color: $grey-600;
+}
+
+.container{
+  background-color: $white;
+  max-width: 375px;
+  border-radius: $s-400;
+  padding: $s-400 $s-600;
+  display: flex;
+  flex-direction: column;
+  gap: $s-300;
+
+  @media only screen and (width >= 700px){
+    max-width: 608px;
+    padding: $s-600 $s-1000;
+  }
+
+  @media only screen and (width >= 1024px) {
+    max-width: 920px;
+    padding: $s-400;
+  }
+}
