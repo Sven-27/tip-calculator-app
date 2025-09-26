@@ -5,32 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href=".assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/output.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  <h1>SPLI<br>TTER</h1>
+  <div class="container">
+    <section class="input-container">
+      <div class="bill-container">
+        <label for="bill">Bill</label>
+        <div class="input-icon-container">
+          <img src="./assets/images/icon-dollar.svg" alt="dollar icon">
+          <input type="number" id="bill" placeholder="0" min="0">
+        </div>
+      </div>
+      <div class="tip-container">
+        <p>Select Tip %</p>
+        <div class="tip-buttons-container">
+          <button class="tip-button">5%</button>
+          <button class="tip-button">10%</button>
+          <button class="tip-button">15%</button>
+          <button class="tip-button">25%</button>
+          <button class="tip-button">50%</button>
+          <input type="number" id="custom-tip" placeholder="Custom" min="0" />
+        </div>
+      </div>
+      <div class="people-container">
+        <label for="people">Number of People</label>
+        <div class="input-icon-container">
+          <img src="./assets/images/icon-person.svg" alt="person icon">
+          <input type="number" id="people" placeholder="0" min="1">
+        </div>
+        <p class="error-message" id="error-message">Can't be zero</p>
+      </div>
+    </section>
+    <section class="output-container">
+      <div class="output-row">
+        <div>
+          <p class="output-label">Tip Amount</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <p class="output-value" id="tip-amount">$0.00</p>
+      </div>
+      <div class="output-row">
+        <div>
+          <p class="output-label">Total</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <p class="output-value" id="total-amount">$0.00</p>
+      </div>
+      <button class="reset-button" id="reset-button" disabled>Reset</button>
+    </section>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 </html>

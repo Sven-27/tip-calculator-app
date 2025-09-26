@@ -32,6 +32,9 @@ ul {
    line-height: 1.5;
    color: #333;
    min-height: 100vh;
+    background-color: $grey-200;
+    display: grid;
+    place-items: center;
  }
 
  // reset links and lists
