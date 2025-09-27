@@ -23,14 +23,15 @@ ul {
 
 body {
   font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
   min-height: 100vh;
   background-color: #C5E4E7;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -52,6 +53,7 @@ button {
   line-height: inherit;
   border: none;
   outline: none;
+  background: transparent;
 }
 
 img,
@@ -62,6 +64,23 @@ video {
 
 h1 {
   color: #3D6666;
+  letter-spacing: 10px;
+  padding-block: 2rem;
+}
+
+.input-container label {
+  color: #5E7A7D;
+  line-height: 2rem;
+}
+.input-container .input-icon-container {
+  width: 100%;
+  background: #F3F9FA;
+}
+.input-container .input-icon-container img {
+  color: #9EBBBD;
+}
+.input-container .input-icon-container input {
+  color: #00474B;
 }
 
 .container {

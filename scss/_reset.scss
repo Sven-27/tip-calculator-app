@@ -26,15 +26,16 @@ ul {
 
 // set base font styles
  body {
-   font-family: "Space Mono", monospace;
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 1.5;
-   color: #333;
-   min-height: 100vh;
-    background-color: $grey-200;
-    display: grid;
-    place-items: center;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  min-height: 100vh;
+  background-color: $grey-200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
  }
 
  // reset links and lists
@@ -58,6 +59,7 @@ ul {
    line-height: inherit;
    border: none;
    outline: none;
+   background: transparent;
  }
 
  // make images and videos responsive

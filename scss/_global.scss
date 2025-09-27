@@ -1,7 +1,28 @@
 h1{
   color: $grey-600;
+  letter-spacing: 10px;;
+  padding-block: $s-400;
 }
 
+.input-container{ 
+  label{
+    color: $grey-500;
+    line-height: $s-400;
+  }
+
+  .input-icon-container{
+    width: 100%;
+    background: $grey-50;
+
+    img{
+      color: $grey-300;
+    }
+
+    input{
+      color: $green-900;
+    }
+  }
+}
 .container{
   background-color: $white;
   max-width: 375px;
