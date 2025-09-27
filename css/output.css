@@ -19,11 +19,11 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 body {
   font-family: "Space Mono", monospace;
-  font-weight: bold;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -32,6 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.2s all ease-in-out;
 }
 
 a {
@@ -51,9 +52,15 @@ button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  font-weight: inherit;
   border: none;
   outline: none;
   background: transparent;
+}
+
+::placeholder {
+  color: #9EBBBD;
+  opacity: 1;
 }
 
 img,
@@ -71,16 +78,58 @@ h1 {
 .input-container label {
   color: #5E7A7D;
   line-height: 2rem;
+  font-weight: bold;
 }
 .input-container .input-icon-container {
   width: 100%;
   background: #F3F9FA;
+  border-radius: 5px;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 .input-container .input-icon-container img {
   color: #9EBBBD;
 }
 .input-container .input-icon-container input {
   color: #00474B;
+  text-align: right;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.input-container .tip-container {
+  margin-block: 2rem;
+}
+.input-container .tip-container .tip-buttons-container {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.input-container .tip-container .tip-buttons-container button {
+  color: #fff;
+  background-color: #00474B;
+  padding-block: 0.5rem;
+  border-radius: 0.25rem;
+}
+.input-container .tip-container .tip-buttons-container button:hover {
+  background-color: #085C61;
+  cursor: pointer;
+}
+.input-container .tip-container .tip-buttons-container input {
+  text-align: center;
+  background: #F3F9FA;
+  border-radius: 0.25rem;
+  color: #00474B;
+}
+.input-container .tip-container .tip-buttons-container input::placeholder {
+  color: #0D686D;
+}
+.input-container .tip-container .tip-buttons-container .tip {
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 .container {

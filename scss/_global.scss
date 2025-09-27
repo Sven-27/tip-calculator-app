@@ -8,11 +8,18 @@ h1{
   label{
     color: $grey-500;
     line-height: $s-400;
+    font-weight: bold;
   }
 
   .input-icon-container{
     width: 100%;
     background: $grey-50;
+    border-radius: 5px;;
+    padding: $s-100 $s-100;
+    display: flex;
+    align-items: center;
+    gap: $s-100;
+    margin-top: $s-50;
 
     img{
       color: $grey-300;
@@ -20,6 +27,48 @@ h1{
 
     input{
       color: $green-900;
+      text-align: right;
+      width: 100%;
+      font-size: $fs-300;
+    }
+  }
+
+  .tip-container{
+    margin-block: $s-400;
+
+    .tip-buttons-container{
+      margin-top: $s-50;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-200;
+
+      button{
+        color: $white;
+        background-color: $green-900;
+        padding-block: $s-100;
+        border-radius: $s-50; 
+
+        &:hover{
+          background-color: $green-800;
+          cursor: pointer;
+        }
+      }
+
+      input{
+        text-align: center;
+        background: $grey-50;
+        border-radius: $s-50;
+        color: $green-900;
+
+        &::placeholder{
+          color: $green-750;
+        }
+      }
+
+      .tip{
+        width: 100%;
+        font-size: $fs-300;
+      }
     }
   }
 }
