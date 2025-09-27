@@ -160,9 +160,6 @@ h1 {
 @media only screen and (width >= 1024px) {
   .output-container {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 }
 .output-container .output-row {
@@ -219,4 +216,4 @@ h1 {
   }
 }
 
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=output.cs.map */

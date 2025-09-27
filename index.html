@@ -33,15 +33,18 @@
         </div>
       </div>
       <div class="people-container">
+        <div class="label-error-container">
         <label for="people">Number of People</label>
+        <p class="error-message" id="error-message">Can't be zero</p>
+        </div>
         <div class="input-icon-container">
           <img src="./assets/images/icon-person.svg" alt="person icon">
           <input type="number" id="people" placeholder="0" min="1">
         </div>
-        <p class="error-message" id="error-message">Can't be zero</p>
       </div>
     </section>
     <section class="output-container">
+      <div class="row-wrapper">
       <div class="output-row">
         <div>
           <p class="output-label">Tip Amount</p>
@@ -55,6 +58,7 @@
           <p class="per-person">/ person</p>
         </div>
         <p class="output-value" id="total-amount">$0.00</p>
+      </div>
       </div>
       <button class="reset-button" id="reset-button" disabled>Reset</button>
     </section>
