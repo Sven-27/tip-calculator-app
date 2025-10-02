@@ -60,6 +60,11 @@ h1{
           background-color: $green-800;
           cursor: pointer;
         }
+
+        &.active{
+          background-color: $green-200;
+          color: $green-900;
+        }
       }
 
       input{
@@ -137,6 +142,12 @@ h1{
     &:hover{
       background-color: $green-200;
       cursor: pointer;
+    }
+
+    &:disabled{
+      background-color: $green-750;
+      color: $green-800;
+      cursor: not-allowed;
     }
   }
 }

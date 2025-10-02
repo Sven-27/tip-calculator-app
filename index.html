@@ -16,7 +16,7 @@
     <section class="input-container">
       <div class="bill-container">
         <label for="bill">Bill</label>
-        <div class="input-icon-container">
+        <div id="bill-container" class="input-icon-container">
           <img src="./assets/images/icon-dollar.svg" alt="dollar icon">
           <input type="number" id="bill" placeholder="0" min="0">
         </div>
@@ -25,11 +25,11 @@
         <label>Select Tip %</label>
         <div class="tip-buttons-container">
           <button class="tip tip-button">5%</button>
-          <button class="tip tip-button">10%</button>
+          <button class="tip tip-button active">10%</button>
           <button class="tip tip-button">15%</button>
           <button class="tip tip-button">25%</button>
           <button class="tip tip-button">50%</button>
-          <input class="tip" type="number" id="custom-tip" placeholder="Custom" min="0" />
+          <input class="tip" type="number" id="custom-tip" placeholder="Custom" min="0"  />
         </div>
       </div>
       <div class="people-container">
@@ -37,7 +37,7 @@
         <label for="people">Number of People</label>
         <p class="error-message" id="error-message">Can't be zero</p>
         </div>
-        <div class="input-icon-container">
+        <div ID="people-container" class="input-icon-container">
           <img src="./assets/images/icon-person.svg" alt="person icon">
           <input type="number" id="people" placeholder="0" min="1">
         </div>
