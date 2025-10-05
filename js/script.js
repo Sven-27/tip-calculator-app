@@ -19,8 +19,10 @@ let numberOfPeople = 1;
 BILL.addEventListener("input", function() {
     if(BILL.value <= 0 || !BILL.value) {
         BILL_CONTAINER.classList.remove("focus");
+        RESET_BUTTON.disabled = true;
     } else {
         BILL_CONTAINER.classList.add("focus");
+        RESET_BUTTON.disabled = false;
     }
 });
 
@@ -34,3 +36,13 @@ PEOPLE.addEventListener("input", function() {
         ERROR_MESSAGE.style.display = "none";
     }
   });
+
+  // set values back to initial values when reset button is clicked
+RESET_BUTTON.addEventListener("click", function() {
+    BILL.value = "";
+    PEOPLE.value = "";
+    BILL_CONTAINER.classList.remove("focus");
+    CUSTOM_TIP.value = "";
+    TIP_AMOUNT.innerText = "$0.00";
+    TOTAL.innerText = "$0.00";
+});
