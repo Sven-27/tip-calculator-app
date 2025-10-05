@@ -18,8 +18,8 @@ h1{
   .input-icon-container{
     width: 100%;
     background: $grey-50;
-    border-radius: 5px;;
-    padding: $s-100 $s-100;
+    border-radius: 5px;
+    padding: $s-100 $s-200;
     display: flex;
     align-items: center;
     gap: $s-100;
@@ -34,6 +34,10 @@ h1{
       text-align: right;
       width: 100%;
       font-size: $fs-300;
+    }
+
+    &.focus{
+      border: 1px solid $green-400;
     }
   }
 
@@ -90,10 +94,22 @@ h1{
       display: flex;
       flex-direction: column;
 
+      @media only screen and (width >= 768px){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+
       .error-message{
         color: $orange;
         font-weight: bold;
         display: none; 
+      }
+    }
+    .input-icon-container{
+      &.error{
+        border: 1px solid red;
       }
     }
   }

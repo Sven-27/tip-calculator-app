@@ -90,7 +90,7 @@ h1 {
   width: 100%;
   background: #F3F9FA;
   border-radius: 5px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -104,6 +104,9 @@ h1 {
   text-align: right;
   width: 100%;
   font-size: 1.5rem;
+}
+.input-container .input-icon-container.focus {
+  border: 1px solid #26C2AE;
 }
 .input-container .tip-container {
   margin-block: 2rem;
@@ -150,10 +153,20 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (width >= 768px) {
+  .input-container .people-container .label-error-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .input-container .people-container .label-error-container .error-message {
   color: #E17052;
   font-weight: bold;
   display: none;
+}
+.input-container .people-container .input-icon-container.error {
+  border: 1px solid red;
 }
 
 .output-container {
