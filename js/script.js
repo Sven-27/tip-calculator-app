@@ -46,5 +46,20 @@ RESET_BUTTON.addEventListener("click", function() {
     ERROR_MESSAGE.style.display = "none";
     CUSTOM_TIP.value = "";
     TIP_AMOUNT.innerText = "$0.00";
-    TOTAL.innerText = "$0.00";
+    // TOTAL.innerText = "$0.00";
+    TIP_BUTTONS.forEach(btn => btn.classList.remove("active"));
+    RESET_BUTTON.disabled = true;
 });
+
+TIP_BUTTONS.forEach(button => {
+    button.addEventListener("click", function(event) {
+      tipPercentage = parseFloat(event.target.value);
+      TIP_BUTTONS.forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+      CUSTOM_TIP.value = "";
+    })
+})
+
+CUSTOM_TIP.addEventListener("focus", function() {
+    TIP_BUTTONS.forEach(btn => btn.classList.remove("active"));
+})
