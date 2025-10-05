@@ -42,6 +42,8 @@ RESET_BUTTON.addEventListener("click", function() {
     BILL.value = "";
     PEOPLE.value = "";
     BILL_CONTAINER.classList.remove("focus");
+    PEOPLE_CONTAINER.classList.remove("error");
+    ERROR_MESSAGE.style.display = "none";
     CUSTOM_TIP.value = "";
     TIP_AMOUNT.innerText = "$0.00";
     TOTAL.innerText = "$0.00";

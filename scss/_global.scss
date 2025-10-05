@@ -37,7 +37,7 @@ h1{
     }
 
     &.focus{
-      border: 1px solid $green-400;
+      border: 2px solid $green-400;
     }
   }
 
@@ -109,7 +109,7 @@ h1{
     }
     .input-icon-container{
       &.error{
-        border: 1px solid red;
+        border: 2px solid $orange;
       }
     }
   }

@@ -106,7 +106,7 @@ h1 {
   font-size: 1.5rem;
 }
 .input-container .input-icon-container.focus {
-  border: 1px solid #26C2AE;
+  border: 2px solid #26C2AE;
 }
 .input-container .tip-container {
   margin-block: 2rem;
@@ -166,7 +166,7 @@ h1 {
   display: none;
 }
 .input-container .people-container .input-icon-container.error {
-  border: 1px solid red;
+  border: 2px solid #E17052;
 }
 
 .output-container {
