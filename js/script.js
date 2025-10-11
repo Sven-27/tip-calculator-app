@@ -6,29 +6,40 @@ const CUSTOM_TIP = document.getElementById("custom-tip");
 const PEOPLE = document.getElementById('people');
 const ERROR_MESSAGE = document.getElementById("error-message");
 const TIP_AMOUNT = document.getElementById("tip-amount");
-const TOTAL = document.getElementById("total");
+const TOTAL = document.getElementById("total-amount");
 const RESET_BUTTON = document.getElementById("reset-button");
+const TIP = document.getElementsByClassName("tip");
 
 
 // initial values
 let tipPercentage = 0;
-let billAmount = 0;
-let numberOfPeople = 1;
 
 // add green border to bill input when input is focused and has a value greater than 0
 BILL.addEventListener("input", function() {
-    if(BILL.value <= 0 || !BILL.value) {
-        BILL_CONTAINER.classList.remove("focus");
+  let billAmount = parseFloat(BILL.value);
+  console.log(billAmount);
+    if(billAmount <= 0 || !billAmount) {
         RESET_BUTTON.disabled = true;
     } else {
-        BILL_CONTAINER.classList.add("focus");
         RESET_BUTTON.disabled = false;
     }
 });
 
+// add green border to bill input when input is focused
+BILL.addEventListener("focus", function() {
+    BILL_CONTAINER.classList.add("focus");
+});
+
+// remove green border to bill input when input is NOT focused
+BILL.addEventListener("blur", function() {
+        BILL_CONTAINER.classList.remove("focus");
+  })
+
 // add orange border to people input when input is has a value of 0 and show error message
 PEOPLE.addEventListener("input", function() {
-    if(PEOPLE.value <= 0 || !PEOPLE.value) {
+  let numberOfPeople = parseInt(PEOPLE.value);
+  console.log(numberOfPeople);
+    if(parseInt(numberOfPeople) === 0) {
         PEOPLE_CONTAINER.classList.add("error");
         ERROR_MESSAGE.style.display = "flex";
     } else {
@@ -46,7 +57,7 @@ RESET_BUTTON.addEventListener("click", function() {
     ERROR_MESSAGE.style.display = "none";
     CUSTOM_TIP.value = "";
     TIP_AMOUNT.innerText = "$0.00";
-    // TOTAL.innerText = "$0.00";
+    TOTAL.innerText = "$0.00";
     TIP_BUTTONS.forEach(btn => btn.classList.remove("active"));
     RESET_BUTTON.disabled = true;
 });
